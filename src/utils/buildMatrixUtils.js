@@ -11,9 +11,9 @@ function getTowersAndPuddles(A){
     if(!A || A.length < 3){
         return 0;
     }
-    var maxR = A[0];
+    var maxR = A[A.length-1];
     var maxL = A[0];
-    var R = 0;
+    var R = A.length-1;
     var L = 0;
     var sum = 0;
     //Finding the right side tower
@@ -74,5 +74,8 @@ export function buildMatrix(A){
             }
         }
     }
-    return arr;
+    return {
+        matrix: arr,
+        volume: towersObj.volume
+    };
 }

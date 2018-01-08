@@ -3,20 +3,17 @@
  */
 import React, {Component} from 'react';
 import Block from './Block.js';
-import {buildMatrix} from '../utils/buildMatrixUtils.js';
+//import {buildMatrix} from '../utils/buildMatrixUtils.js';
 
-//stubs
-//var A = [2,3,6,2,3,1,7,3,2,2];
-//var B = [2,5,1,2,3,4,7,7,6];
-var C = [2,4,1,5];
+
 
 class TowersVisuals extends Component {
     render(){
-        const arr = buildMatrix(C);
+        const matrix = this.props.matrix;//buildMatrix(C);
         return (
             <div>
                 Towers
-                {arr.map((row, rowIndex) => {
+                {matrix.map((row, rowIndex) => {
                     return (
                         <div key={rowIndex}>
                             {
