@@ -3,9 +3,6 @@
  */
 import React, {Component} from 'react';
 import Block from './Block.js';
-//import {buildMatrix} from '../utils/buildMatrixUtils.js';
-
-
 
 class TowersVisuals extends Component {
     render(){
