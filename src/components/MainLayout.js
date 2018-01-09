@@ -4,12 +4,13 @@
 import React, {Component} from 'react';
 import TowersVisuals from './TowersVisuals.js';
 import {buildMatrix} from '../utils/buildMatrixUtils.js';
+import '../styles/MainLayout.css'
 
 class MainLayout extends Component {
     constructor(props){
         super(props);
         this.state = {
-            towersHeights: [2,4,1,5],
+            towersHeights: [2,5,1,2,3,4,7,7,6],
             heightsStr:''
         };
         this.onTowersHeightsChange = this.onTowersHeightsChange.bind(this);
@@ -27,10 +28,13 @@ class MainLayout extends Component {
     render() {
         const result = buildMatrix(this.state.towersHeights);
         return (
-            <div>
+            <div className='main-layout'>
+                <div className='header'>
+                    <span className='title'>Towers and Puddles</span>
+                    <input type='text' onChange={this.onTowersHeightsChange} />
+                    <button onClick={this.onBuildClick}>Build towers</button>
+                </div>
                 <TowersVisuals matrix={result.matrix}/>
-                <input type='text' onChange={this.onTowersHeightsChange}/>
-                <button onClick={this.onBuildClick}>Build towers</button>
                 <div>Total puddle volume is <b>{result.volume}</b></div>
             </div>
         );

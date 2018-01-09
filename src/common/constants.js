@@ -4,5 +4,6 @@
 export const BLOCK_TYPE = {
     WATER: 'water',
     BRICK: 'brick',
-    EMPTY:'empty'
+    EMPTY:'empty',
+    WAVE: 'wave'
 };

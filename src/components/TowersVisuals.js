@@ -8,11 +8,10 @@ class TowersVisuals extends Component {
     render(){
         const matrix = this.props.matrix;//buildMatrix(C);
         return (
-            <div>
-                Towers
+            <div className='towers-visuals'>
                 {matrix.map((row, rowIndex) => {
                     return (
-                        <div key={rowIndex}>
+                        <div className='row' key={rowIndex}>
                             {
                                 row.map((item, itemIndex) => {
                                     return <Block type={item} key={itemIndex}/>;

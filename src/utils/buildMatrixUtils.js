@@ -63,7 +63,7 @@ export function buildMatrix(A){
                 arr[i] = arr[i] || [];
                 if(i >= max-A[towersObj.L]){
                     if(i<currentTower){
-                        arr[i][j] = BLOCK_TYPE.WATER;
+                        arr[i][j] = i === max-A[towersObj.L] ? BLOCK_TYPE.WAVE : BLOCK_TYPE.WATER;
                     }else{
                         arr[i][j] = BLOCK_TYPE.BRICK;
                     }
