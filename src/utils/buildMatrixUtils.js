@@ -8,9 +8,6 @@ import {BLOCK_TYPE} from '../common/constants.js'
     and retrieve those two towers heights and the puddle volume
  */
 function getTowersAndPuddles(A){
-    if(!A || A.length < 3){
-        return 0;
-    }
     var maxR = A[A.length-1];
     var maxL = A[0];
     var R = A.length-1;
