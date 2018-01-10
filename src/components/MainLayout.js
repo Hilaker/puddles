@@ -19,6 +19,7 @@ class MainLayout extends Component {
     onBuildClick(event){
         var heightsStr = this.state.heightsStr || '';
         var heightsArr = heightsStr.split(',');
+        heightsArr = heightsArr.map(str => parseInt(str));
         this.setState({towersHeights: heightsArr});
     }
     onTowersHeightsChange(event){
